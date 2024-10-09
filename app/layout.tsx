@@ -9,12 +9,14 @@ const antonio = Antonio({
   weight: '500',
   display: 'swap',
   subsets: ['latin'],
+  variable: '--font-antonio',
 });
 
 export const spartan = League_Spartan({
   weight: ['400', '700'],
   display: 'swap',
   subsets: ['latin'],
+  variable: '--font-spartan',
 });
 
 export const RootLayout = ({
@@ -24,7 +26,7 @@ export const RootLayout = ({
 }>) => {
   return (
     <html lang='en'>
-      <body className={`${antonio.className} relative min-h-dvh antialiased bg-background`}>
+      <body className={`${antonio.variable} relative min-h-dvh antialiased bg-background`}>
         <Image
           src={BackgroundImageStars}
           className='object-cover -z-10'
