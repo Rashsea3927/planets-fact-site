@@ -5,11 +5,10 @@ import Header from '@/components/Header';
 import Image from 'next/image';
 import BackgroundImageStars from '@/public/assets/background-stars.svg';
 
-const antonio = Antonio({
+export const antonio = Antonio({
   weight: '500',
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-antonio',
 });
 
 export const spartan = League_Spartan({
@@ -26,7 +25,7 @@ export const RootLayout = ({
 }>) => {
   return (
     <html lang='en'>
-      <body className={`${antonio.variable} relative min-h-dvh antialiased bg-background`}>
+      <body className={`${antonio.className} relative min-h-dvh antialiased bg-background`}>
         <Image
           src={BackgroundImageStars}
           className='object-cover -z-10'

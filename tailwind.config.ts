@@ -26,7 +26,6 @@ const config: Config = {
         '3xl': '1.75rem',
       },
       fontFamily: {
-        antonio: ['var(--font-antonio)', 'sans-serif'],
         spartan: ['var(--font-spartan)', 'sans-serif'],
       },
       borderRadius: {
