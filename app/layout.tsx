@@ -33,7 +33,7 @@ export const RootLayout = ({
           alt='background image'
         />
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import Menu from '@/components/Menu';
 
@@ -28,6 +34,7 @@ const Header = () => {
         <SheetContent className='w-full border-none top-[75px] h-[calc(100%-75px)] focus-visible:outline-none pt-11'>
           <VisuallyHidden>
             <SheetTitle>Menu</SheetTitle>
+            <SheetDescription>Navigation menu</SheetDescription>
           </VisuallyHidden>
           <Menu />
         </SheetContent>

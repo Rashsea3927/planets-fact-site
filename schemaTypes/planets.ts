@@ -75,5 +75,10 @@ export const planetType = defineType({
       title: 'Surface Geology',
       type: 'text',
     }),
+    defineField({
+      name: 'color',
+      title: 'Color',
+      type: 'color',
+    }),
   ],
 });
