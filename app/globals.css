@@ -23,3 +23,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .nav-item-border {
+    @apply after:w-0 after:absolute after:h-1 after:-top-8 after:left-0 after:transition-width after:duration-500 after:hover:w-full;
+  }
+
+  .nav-item-border::after {
+    background-color: var(--hover-bg-color);
+  }
+}

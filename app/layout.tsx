@@ -24,7 +24,7 @@ export const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang='en'>
+    <html lang='en' className={`${spartan.variable}`}>
       <body className={`${antonio.className} relative min-h-dvh antialiased bg-background`}>
         <Image
           src={BackgroundImageStars}
@@ -33,7 +33,7 @@ export const RootLayout = ({
           alt='background image'
         />
         <Header />
-        <main>{children}</main>
+        <main className='py-11 lg:py-14'>{children}</main>
       </body>
     </html>
   );
