@@ -11,6 +11,14 @@ export const planetType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+      },
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',

@@ -21,3 +21,26 @@ export const getPlanets = async () => {
     }`
   );
 };
+
+export const getPlanetDetail = async (slug: string) => {
+  return await client.fetch(
+    groq`*[_type == 'planet' && slug.current == $slug][0]{
+      _id,
+      name,
+      color,
+      radius,
+      rotationTime,
+      rotationTimeUnit,
+      revolutionTime,
+      revolutionTimeUnit,
+      averageTemperature,
+      description,
+      surfaceGeology,
+      internalStructure,
+      images[] {
+        'url': asset->url
+      }
+    }`,
+    { slug }
+  );
+};

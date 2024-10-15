@@ -6,13 +6,11 @@ import Image from 'next/image';
 import BackgroundImageStars from '@/public/assets/background-stars.svg';
 
 export const antonio = Antonio({
-  weight: '500',
   display: 'swap',
   subsets: ['latin'],
 });
 
 export const spartan = League_Spartan({
-  weight: ['400', '700'],
   display: 'swap',
   subsets: ['latin'],
   variable: '--font-spartan',
@@ -33,7 +31,7 @@ export const RootLayout = ({
           alt='background image'
         />
         <Header />
-        <main className='py-11 lg:py-14'>{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
