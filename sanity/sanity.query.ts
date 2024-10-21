@@ -13,13 +13,17 @@ export const getPlanetName = async () => {
 
 export const getPlanets = async () => {
   return await client.fetch(
-    groq`*[_type == 'planet']{
+    groq`*[_type == 'planet'] | order(_createdAt asc){
       _id,
       name,
       color,
       "imageUrl": images[0].asset->url
     }`
   );
+};
+
+export const getAllPlanetSlugs = async () => {
+  return await client.fetch(groq`*[_type == "planet"]{ "slug": slug.current }`);
 };
 
 export const getPlanetDetail = async (slug: string) => {
@@ -34,11 +38,14 @@ export const getPlanetDetail = async (slug: string) => {
       revolutionTime,
       revolutionTimeUnit,
       averageTemperature,
-      description,
+      descriptions,
       surfaceGeology,
       internalStructure,
       images[] {
-        'url': asset->url
+        'url': asset->url,
+        spSize,
+        tabletSize,
+        pcSize
       }
     }`,
     { slug }

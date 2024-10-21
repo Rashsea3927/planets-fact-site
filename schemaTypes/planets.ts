@@ -19,11 +19,6 @@ export const planetType = defineType({
       },
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-    }),
-    defineField({
       name: 'rotationTime',
       title: 'Rotation Time',
       type: 'number',
@@ -68,20 +63,56 @@ export const planetType = defineType({
       type: 'number',
     }),
     defineField({
+      name: 'descriptions',
+      title: 'Descriptions',
+      type: 'object',
+      fields: [
+        {
+          name: 'overviewDescription',
+          title: 'Overview Description',
+          type: 'text',
+        },
+        {
+          name: 'structureDescription',
+          title: 'Structure Description',
+          type: 'text',
+        },
+        {
+          name: 'surfaceDescription',
+          title: 'Surface Description',
+          type: 'text',
+        },
+      ],
+    }),
+    defineField({
       name: 'images',
       title: 'Images',
       type: 'array',
-      of: [{ type: 'image' }],
-    }),
-    defineField({
-      name: 'internalStructure',
-      title: 'Internal Structure',
-      type: 'text',
-    }),
-    defineField({
-      name: 'surfaceGeology',
-      title: 'Surface Geology',
-      type: 'text',
+      of: [
+        {
+          type: 'image',
+          fields: [
+            {
+              name: 'spSize',
+              title: 'SP Size',
+              type: 'number',
+              description: 'Size of the image for small devices (in pixels)',
+            },
+            {
+              name: 'tabletSize',
+              title: 'Tablet Size',
+              type: 'number',
+              description: 'Size of the image for tablet devices (in pixels)',
+            },
+            {
+              name: 'pcSize',
+              title: 'PC Size',
+              type: 'number',
+              description: 'Size of the image for PC devices (in pixels)',
+            },
+          ],
+        },
+      ],
     }),
     defineField({
       name: 'color',

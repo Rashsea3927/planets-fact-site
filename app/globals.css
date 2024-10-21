@@ -32,4 +32,28 @@
   .nav-item-border::after {
     background-color: var(--hover-bg-color);
   }
+
+  .mobile-nav-item-border {
+    @apply after:w-full after:absolute after:h-1 after:-bottom-2 after:left-0;
+  }
+
+  .mobile-nav-item-border::after {
+    background-color: var(--hover-bg-color);
+  }
+
+  .planet-size {
+    position: relative;
+    width: var(--sp-size);
+    height: var(--sp-size);
+
+    @media (min-width: 640px) {
+      width: var(--tab-size);
+      height: var(--tab-size);
+    }
+
+    @media (min-width: 1024px) {
+      width: var(--pc-size);
+      height: var(--pc-size);
+    }
+  }
 }

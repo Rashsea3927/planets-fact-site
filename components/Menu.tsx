@@ -7,7 +7,7 @@ const Menu = async () => {
 
   return (
     <nav>
-      <ul className='sm:flex sm:gap-8 sm:items-center lg:mt-1'>
+      <ul className='sm:flex sm:gap-4 md:gap-8 sm:items-center lg:mt-1'>
         {planetNames.map((planet, index) => {
           return (
             <li

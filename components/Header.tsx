@@ -17,7 +17,7 @@ const Header = () => {
         <Link href='/'>
           <h1 className='uppercase text-3xl tracking-tighter text-foreground'>The Planets</h1>
         </Link>
-        <div className='sm:hidden'>
+        <div className='flex items-center sm:hidden'>
           <Sheet>
             <SheetTrigger asChild>
               <Button
@@ -33,7 +33,7 @@ const Header = () => {
                 </div>
               </Button>
             </SheetTrigger>
-            <SheetContent className='w-full border-none top-[75px] h-[calc(100%-75px)] focus-visible:outline-none pt-11'>
+            <SheetContent className='w-[90%] border-none top-[75px] h-[calc(100%-75px)] focus-visible:outline-none pt-11'>
               <VisuallyHidden>
                 <SheetTitle>Menu</SheetTitle>
                 <SheetDescription>Navigation menu</SheetDescription>

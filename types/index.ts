@@ -27,7 +27,11 @@ export type PlanetDetail = {
   revolutionTime: number;
   revolutionTimeUnit: string;
   averageTemperature: number;
-  description: string;
+  descriptions: {
+    overviewDescription: string;
+    structureDescription: string;
+    surfaceDescription: string;
+  };
   surfaceGeology: string;
   internalStructure: string;
   images: {
