@@ -1,8 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { getPlanets } from '@/sanity/sanity.query';
 import { PlanetWithImage } from '@/types';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'The Planets',
+};
 
 export const HomePage = async () => {
   const planets: PlanetWithImage[] = await getPlanets();

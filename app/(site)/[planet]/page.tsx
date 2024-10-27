@@ -15,6 +15,15 @@ type displayKeysType = {
   averageTemperature: 'average temp';
 };
 
+export const generateMetadata = async ({ params }: Props) => {
+  const slug = params.planet;
+  const planet: PlanetDetail = await getPlanetDetail(slug);
+
+  return {
+    title: `${planet.name} | The Planets`,
+  };
+};
+
 export const generateStaticParams = async () => {
   const slugs = await getAllPlanetSlugs();
   return slugs.map((slug: { slug: string }) => ({
