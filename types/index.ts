@@ -32,6 +32,7 @@ export type PlanetDetail = {
     structureDescription: string;
     surfaceDescription: string;
   };
+  wikipediaLink: string;
   surfaceGeology: string;
   internalStructure: string;
   images: {

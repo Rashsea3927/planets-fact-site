@@ -3,7 +3,7 @@ import client from './sanity.client';
 
 export const getPlanetName = async () => {
   return await client.fetch(
-    groq`*[_type == 'planet']{
+    groq`*[_type == 'planet'] | order(_createdAt asc){
       _id,
       name,
       color
@@ -39,6 +39,7 @@ export const getPlanetDetail = async (slug: string) => {
       revolutionTimeUnit,
       averageTemperature,
       descriptions,
+      wikipediaLink,
       surfaceGeology,
       internalStructure,
       images[] {

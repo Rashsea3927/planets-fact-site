@@ -10,20 +10,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xl: '1440px',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        mercury: 'hsl(var(--mercury))',
-        venus: 'hsl(var(--venus))',
-        earth: 'hsl(var(--earth))',
-        mars: 'hsl(var(--mars))',
-        jupiter: 'hsl(var(--jupiter))',
-        saturn: 'hsl(var(--saturn))',
-        uranus: 'hsl(var(--uranus))',
-        neptune: 'hsl(var(--neptune))',
       },
       fontSize: {
         '3xl': '1.75rem',
+        '4xl': '2.5rem',
       },
       fontFamily: {
         spartan: ['var(--font-spartan)', 'sans-serif'],
@@ -39,6 +35,9 @@ const config: Config = {
       transitionProperty: {
         position: 'background-position',
         width: 'width',
+      },
+      gap: {
+        '15': '4.375rem',
       },
     },
   },

@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const HomePage = async () => {
   const planets: PlanetWithImage[] = await getPlanets();
   return (
-    <div className='py-11 lg:py-14'>
+    <div className='pb-11 lg:pb-20'>
       <ul className='grid gap-12 justify-center max-sm:px-6 sm:grid-cols-2 lg:grid-cols-3 sm:max-w-[608px] lg:max-w-[1110px] sm:mx-auto'>
         {planets.map((planet) => (
           <li className='grid justify-center gap-5' key={planet._id}>

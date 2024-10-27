@@ -33,27 +33,45 @@
     background-color: var(--hover-bg-color);
   }
 
-  .mobile-nav-item-border {
+  .active-tab {
     @apply after:w-full after:absolute after:h-1 after:-bottom-2 after:left-0;
   }
 
-  .mobile-nav-item-border::after {
+  @media (min-width: 768px) {
+    .active-tab {
+      background-color: var(--hover-bg-color);
+    }
+
+    .active-tab::after {
+      @apply hidden;
+    }
+  }
+
+  .active-tab::after {
     background-color: var(--hover-bg-color);
+  }
+
+  .before-content::before {
+    display: block;
+    content: var(--before-content);
+    @apply text-foreground/50 mr-4;
   }
 
   .planet-size {
     position: relative;
-    width: var(--sp-size);
-    height: var(--sp-size);
+    width: 100%;
+    height: 100%;
+    max-width: var(--sp-size);
+    max-height: var(--sp-size);
 
     @media (min-width: 640px) {
-      width: var(--tab-size);
-      height: var(--tab-size);
+      max-width: var(--tab-size);
+      max-height: var(--tab-size);
     }
 
     @media (min-width: 1024px) {
-      width: var(--pc-size);
-      height: var(--pc-size);
+      max-width: var(--pc-size);
+      max-height: var(--pc-size);
     }
   }
 }

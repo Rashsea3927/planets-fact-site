@@ -12,7 +12,7 @@ import Menu from '@/components/Menu';
 
 const Header = () => {
   return (
-    <header className='relative z-[51] px-6 py-4 sm:py-8 lg:pt-5 lg:pb-6 border-b-[1px] border-foreground/20 flex items-center justify-between sm:flex-col lg:flex-row sm:gap-10'>
+    <header className='relative z-[51] px-6 py-4 sm:py-8 lg:pt-5 lg:pb-6 border-b-[1px] border-foreground/20 flex items-center justify-between sm:flex-col lg:flex-row sm:gap-10 md:mb-7 lg:mb-20'>
       <div className='w-full flex items-center justify-between sm:flex-col lg:flex-row lg:max-w-[1110px] sm:gap-10 lg:mx-auto'>
         <Link href='/'>
           <h1 className='uppercase text-3xl tracking-tighter text-foreground'>The Planets</h1>

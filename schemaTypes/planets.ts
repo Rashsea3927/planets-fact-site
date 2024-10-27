@@ -115,6 +115,11 @@ export const planetType = defineType({
       ],
     }),
     defineField({
+      name: 'wikipediaLink',
+      title: 'Wikipedia Link',
+      type: 'string',
+    }),
+    defineField({
       name: 'color',
       title: 'Color',
       type: 'color',
