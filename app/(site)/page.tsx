@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: 'The Planets',
 };
 
-export const HomePage = async () => {
+type HomePageType = () => Promise<JSX.Element>;
+
+const HomePage: HomePageType = async () => {
   const planets: PlanetWithImage[] = await getPlanets();
   return (
     <div className='pb-11 lg:pb-20'>
