@@ -1,7 +1,7 @@
 import { dataset, projectId } from '@/env';
-import { createClient, type ClientConfig } from '@sanity/client';
+import { createClient } from 'next-sanity';
 
-const config: ClientConfig = {
+const config = {
   projectId: projectId,
   dataset: dataset,
   apiVersion: '2024-10-11',
