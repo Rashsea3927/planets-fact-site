@@ -1,5 +1,5 @@
 import ToggleCotnent from '@/components/ToggleCotnent';
-import { getAllPlanetSlugs, getPlanetDetail } from '@/sanity/sanity.query';
+import { getPlanetDetail } from '@/sanity/sanity.query';
 import { PlanetDetail } from '@/types';
 
 type Props = {
@@ -22,13 +22,6 @@ export const generateMetadata = async ({ params }: Props) => {
   return {
     title: `${planet.name} | The Planets`,
   };
-};
-
-export const generateStaticParams = async () => {
-  const slugs = await getAllPlanetSlugs();
-  return slugs.map((slug: { slug: string }) => ({
-    params: { planet: slug.slug },
-  }));
 };
 
 const PlanetDetailPage = async ({ params }: Props) => {
