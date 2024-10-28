@@ -1,6 +1,5 @@
 import { dataset, projectId } from '@/env';
-import { createClient } from 'next-sanity';
-import { type ClientConfig } from '@sanity/client';
+import { createClient, type ClientConfig } from '@sanity/client';
 
 const config: ClientConfig = {
   projectId: projectId,
