@@ -9,8 +9,8 @@ export default defineConfig({
   name: 'default',
   title: 'planets-fact-site',
 
-  projectId: projectId,
-  dataset: dataset,
+  projectId: projectId || 'ddmndcen',
+  dataset: dataset || 'production',
   basePath: '/studio',
   plugins: [structureTool(), visionTool(), colorInput()],
 
