@@ -17,6 +17,7 @@ export const getPlanets = async () => {
       _id,
       name,
       color,
+      slug,
       "imageUrl": images[0].asset->url
     }`
   );

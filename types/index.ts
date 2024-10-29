@@ -12,6 +12,7 @@ export type PlanetWithImage = {
   color: {
     hex: string;
   };
+  slug: string;
   imageUrl: string;
 };
 
