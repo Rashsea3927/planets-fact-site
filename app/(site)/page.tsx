@@ -7,6 +7,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'The Planets',
+  description:
+    'Explore detailed information about the planets in our solar system, including their characteristics, images, and more.',
 };
 
 type HomePageType = () => Promise<JSX.Element>;

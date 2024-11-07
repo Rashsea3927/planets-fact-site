@@ -21,6 +21,7 @@ export const generateMetadata = async ({ params }: Props) => {
 
   return {
     title: `${planet.name} | The Planets`,
+    description: planet.descriptions.overviewDescription,
   };
 };
 
