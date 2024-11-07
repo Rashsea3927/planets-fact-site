@@ -100,7 +100,11 @@ const ToggleCotnent = ({ images, name, color, descriptions, wikiLink }: Props) =
         </p>
         <p className='flex items-center justify-center mb-7 font-spartan text-center text-foreground/50 font-normal md:justify-start md:mb-0 lg:mb-10'>
           Source&nbsp;:&nbsp;
-          <Link className='font-semibold tracking-wider underline mr-1' href={wikiLink}>
+          <Link
+            className='font-semibold tracking-wider underline mr-1'
+            href={wikiLink}
+            target='_blank'
+          >
             Wikipedia
           </Link>
           <Image src='/assets/icon-source.svg' alt='source' width={12} height={12} />
