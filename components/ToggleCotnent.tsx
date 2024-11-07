@@ -76,7 +76,7 @@ const ToggleCotnent = ({ images, name, color, descriptions, wikiLink }: Props) =
             </div>
             {index === 2 && (
               <Image
-                className='absolute bottom-0 w-[100px] md:w-[130px] h-[125px] md:h-[162.5px]'
+                className='absolute bottom-0 w-[100px] md:w-[130px] h-[125px] md:h-[162.5px] xl:w-[163px] xl:h-[199px] xl:bottom-5'
                 src={images[2].url}
                 width={163}
                 height={199}
