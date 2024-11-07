@@ -16,7 +16,7 @@ const HomePage: HomePageType = async () => {
   return (
     <div className='pb-11 lg:pb-20'>
       <ul className='grid gap-12 justify-center mt-8 max-sm:px-6 sm:grid-cols-2 lg:grid-cols-3 sm:max-w-[608px] lg:max-w-[1110px] sm:mx-auto'>
-        {planets.map((planet) => (
+        {planets.map((planet, index) => (
           <li className='grid justify-center gap-5' key={planet._id}>
             <h2 className='text-center text-2xl uppercase tracking-wide'>{planet.name}</h2>
             <div>
@@ -24,8 +24,9 @@ const HomePage: HomePageType = async () => {
                 className='w-[180px] h-auto'
                 src={planet.imageUrl}
                 alt={planet.name}
-                width={0}
-                height={0}
+                width={180}
+                height={180}
+                loading={index === 0 ? 'eager' : 'lazy'}
               />
             </div>
             <Button
